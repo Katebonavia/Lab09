@@ -23,9 +23,9 @@ class Controller:
                                                       f" {self._model.getNumNodes()} nodi e {self._model.getNumEdges()} "
                                                       f" archi"))
         for arco in self._model.getAllEdges():
-            print(arco[0])
-            self._view.txt_result.controls.append(ft.Text(f"Partenza: {arco[0]}  "
+
+            self._view.txt_result.controls.append(ft.Text(f"Partenza: {arco[0]} "
                                                           f"Arrivo: {arco[1]} "
-                                                          f"Peso: "))
+                                                          f"Peso: {self._model._graph[arco[0]][arco[1]]["weight"]}"))
 
         self._view.update_page()
